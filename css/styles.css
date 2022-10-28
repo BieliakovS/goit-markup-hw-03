@@ -1,7 +1,9 @@
 :root {
+  /* fonts */
   --main-font: "Roboto", sans-serif;
   --additional-font: "Raleway", sans-serif;
 
+  /* colors */
   --color-main-1: #212121;
   --color-main-2: #757575;
   --color-main-3: #ffffff;
@@ -17,6 +19,7 @@
   --color-additional-shadow-3: rgba(0, 0, 0, 0.2);
   --color-header-border: #ececec;
 
+  /* values */
   --items: 4;
   --indent: 30px;
 }
