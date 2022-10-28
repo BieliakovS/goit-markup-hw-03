@@ -1,4 +1,7 @@
 :root {
+  --main-font: "Roboto", sans-serif;
+  --additional-font: "Raleway", sans-serif;
+
   --color-main-1: #212121;
   --color-main-2: #757575;
   --color-main-3: #ffffff;
@@ -19,7 +22,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -67,7 +70,7 @@ ul {
 }
 
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--additional-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -208,10 +211,11 @@ ul {
 
 .our-skills__list,
 .work-photos__list,
-.our-team__list {
+.our-team__list,
+.filter-list,
+.our-projects__list {
   display: flex;
   flex-wrap: wrap;
-
   gap: var(--indent);
 }
 
@@ -221,12 +225,13 @@ ul {
 
 .our-skills__item,
 .work-photos__item,
-.our-team__item {
+.our-team__item,
+.our-projects__item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
 .our-skills__title {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 
   font-size: 14px;
   font-weight: 700;
@@ -243,7 +248,7 @@ ul {
 
 .work-photos__title,
 .our-team__title {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
 
@@ -276,7 +281,7 @@ ul {
   border-radius: 0px 0px 4px 4px;
 }
 
-.our-team-container {
+.our-team__container {
   padding: 30px 10px;
 }
 
@@ -289,7 +294,7 @@ ul {
 }
 
 .our-team__text-name {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 
   font-weight: 500;
 }
@@ -304,14 +309,15 @@ ul {
 }
 
 .footer__address {
-  padding-top: 20px;
+  margin-top: 20px;
 
   line-height: 1.71;
 }
 
 .location {
   display: block;
-  padding-bottom: 9px;
+  margin-bottom: 9px;
+
   color: var(--color-main-3);
   text-decoration: none;
   font-style: normal;
@@ -331,7 +337,13 @@ ul {
 }
 
 .contacts__mail--footer {
-  padding-bottom: 9px;
+  margin-bottom: 9px;
+}
+
+.filter-list {
+  justify-content: center;
+  --indent: 8px;
+  margin-bottom: 50px;
 }
 
 .logo__change-color-text--reverse {
@@ -339,6 +351,8 @@ ul {
 }
 
 .filter-list__button {
+  padding: 6px 22px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -354,20 +368,34 @@ ul {
 .filter-list__button:hover,
 .filter-list__button:focus,
 .filter-list__button:active {
+  padding-left: 25px;
+  padding-right: 25px;
+
   color: var(--color-main-3);
   background-color: var(--color-accent);
 }
 
 .our-projects__item {
+  --items: 3;
+  width: 370px;
+
   box-sizing: border-box;
-  border: 1px solid var(--color-additional-2);
 }
 
 .our-projects__link {
   text-decoration: none;
 }
 
+.our-projects__container {
+  padding: 20px 24px;
+
+  border: 1px solid var(--color-additional-2);
+  border-top: none;
+}
+
 .our-projects__title {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
