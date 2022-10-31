@@ -387,6 +387,10 @@ ul {
   text-decoration: none;
 }
 
+.our-projects__image {
+  display: block;
+}
+
 .our-projects__container {
   padding: 20px 24px;
 
